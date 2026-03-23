@@ -18,20 +18,6 @@ export default function AgeComparison({ data }: { data: AgeComparisonData }) {
 
     return (
         <div className="max-w-5xl">
-            <div className="mb-10">
-                <p className="text-[10px] font-semibold uppercase tracking-[0.25em] text-black/35 dark:text-white/35 mb-3">
-                    Cycles
-                </p>
-                <h1 className="text-4xl font-bold tracking-tight text-black dark:text-white">
-                    {data.title}
-                </h1>
-                {data.description && (
-                    <p className="text-sm text-black/50 dark:text-white/50 mt-2.5 max-w-2xl leading-relaxed">
-                        {data.description}
-                    </p>
-                )}
-            </div>
-
             <div className="hidden md:grid md:grid-cols-[160px_1fr_1fr] mb-6">
                 <div />
                 {data.ages.map((age, i) => (

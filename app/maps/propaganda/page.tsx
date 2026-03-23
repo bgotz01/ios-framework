@@ -31,8 +31,7 @@ export default function PropagandaPage() {
                             <div className="max-w-2xl space-y-2 text-base text-muted-foreground md:text-lg">
                                 <p>Propaganda is not primarily about lying.</p>
                                 <p>
-                                    It is about controlling perception, attention, interpretation,
-                                    and ultimately what people feel permitted to say.
+                                    It is about controlling perception, attention, interpretation, and ultimately what people feel permitted to say.
                                 </p>
                             </div>
                         </div>

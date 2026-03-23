@@ -1,10 +1,16 @@
+// app/cycles/age-cycle/data.ts
+import type { TimelineData } from "@/components/Timeline";
+
+export type { TimelineData };
+
 export type ComparisonRowKey =
     | "core"
     | "truth"
     | "authority"
     | "structure"
     | "power"
-    | "change";
+    | "change"
+    | "economics";
 
 export type AgeData = {
     name: string;
@@ -32,6 +38,7 @@ export type AgeComparisonData = {
     description?: string;
     ages: [AgeData, AgeData];
     rows: ComparisonRow[];
+    transition?: TimelineData;
 };
 
 const ageCycleData: AgeComparisonData = {
@@ -176,7 +183,106 @@ const ageCycleData: AgeComparisonData = {
                 ],
             },
         },
+        {
+            key: "economics",
+            label: "Economics",
+            pisces: {
+                summary: "Embedded in sacred order.",
+                bullets: [
+                    "Economic life nested inside monarchy and religious legitimacy",
+                    "Inherited hierarchy determines station",
+                    "Moral narratives about duty justify distribution",
+                    "Wealth flows through sacred and feudal structures",
+                ],
+            },
+            aquarius: {
+                summary: "Abstract and systematized.",
+                bullets: [
+                    "Economic life becomes financialized and networked",
+                    "Data-driven allocation replaces moral justification",
+                    "Open to rapid disruption by new systems",
+                    "Markets, protocols, and platforms replace courts and churches",
+                ],
+            },
+        },
     ],
+    transition: {
+        subject: "Transition Timeline",
+        description: "1800 → 2200 — The breakdown of belief-based order and the rise of system-based reality.",
+        sequence: "Pisces dominant → hybrid phase → network emergence → system dominance → full Aquarius",
+        eras: [
+            {
+                period: "Phase 1",
+                label: "≈ 1800–1900",
+                hex: "#6366f1",
+                dominantForce: "Collapse of Divine Order",
+                summary: "Pisces dominant — but systems begin to compete with belief",
+                bullets: [
+                    "Napoleonic Wars destroy feudal / divine-right order — power becomes military + organizational",
+                    "Industrial Revolution introduces mechanical systems — production becomes process-driven, not tradition-driven",
+                    "Telegraph creates the first instant network — breaks geographic isolation",
+                ],
+                insight: "Pisces is still dominant, but systems begin to compete with belief",
+            },
+            {
+                period: "Phase 2",
+                label: "≈ 1900–1990",
+                hex: "#8b5cf6",
+                dominantForce: "Systems Scale Globally",
+                summary: "Hybrid phase — Aquarius systems exist but controlled in a Pisces way",
+                bullets: [
+                    "World War II — industrial + bureaucratic systems dominate warfare; total mobilization = system power",
+                    "Cold War — competing ideological systems; centralized control at massive scale",
+                    "Mainframe Computer — birth of digital systems, still controlled by institutions",
+                    "Television — peak Pisces tool: one-to-many narrative control",
+                ],
+                insight: "Aquarius systems exist but are controlled in a Pisces way (centralized narrative control)",
+            },
+            {
+                period: "Phase 3",
+                label: "≈ 1990–2020",
+                hex: "#06b6d4",
+                dominantForce: "Network Emergence",
+                summary: "Pisces authority collapses — Aquarius still unstable",
+                bullets: [
+                    "Internet removes gatekeepers — enables node-to-node communication",
+                    "World Wide Web makes information accessible and searchable",
+                    "Open Source Software makes production distributed",
+                    "Social Media destroys narrative monopoly — creates fragmented truth",
+                ],
+                insight: "Pisces authority begins to collapse. But Aquarius is still unstable: too much noise, no clear structure, trust fragmentation",
+            },
+            {
+                period: "Phase 4",
+                label: "≈ 2020–2050",
+                hex: "#10b981",
+                dominantForce: "System Dominance",
+                summary: "Uranus accelerates faster than Saturn can stabilize — volatility",
+                bullets: [
+                    "Artificial Intelligence — decision-making becomes system-driven",
+                    "Rise of digital infrastructure — platforms, cloud, APIs, global coordination layers",
+                    "Remote + digital work — geography becomes less relevant",
+                    "Expansion of open networks — permissionless creation, distributed coordination",
+                ],
+                insight: "Uranus (innovation) is accelerating faster than Saturn (structure) can stabilize — this is volatility",
+            },
+            {
+                period: "Phase 5",
+                label: "≈ 2050–2200",
+                hex: "#f59e0b",
+                dominantForce: "Full Aquarius",
+                summary: "Aquarius stabilizes when Saturn catches up to Uranus",
+                bullets: [
+                    "Infrastructure-first power replaces narrative-first power",
+                    "Global coordination systems emerge",
+                    "Reduced reliance on narrative authority",
+                    "Continuous system evolution becomes the norm",
+                    "High abstraction: AI, automation, digital identity",
+                ],
+                insight: "Aquarius stabilizes when Saturn catches up to Uranus",
+            },
+        ],
+    },
 };
 
 export default ageCycleData;

@@ -25,11 +25,13 @@ export type TimelineData = {
 export default function Timeline({
     data,
     onEraChange,
+    initialEra = 0,
 }: {
     data: TimelineData;
     onEraChange?: (index: number) => void;
+    initialEra?: number;
 }) {
-    const [active, setActive] = useState(0);
+    const [active, setActive] = useState(initialEra);
     const era = data.eras[active];
     const { theme } = useTheme();
     const isDark = theme === "dark";
@@ -49,12 +51,12 @@ export default function Timeline({
     return (
         <div className="max-w-5xl">
             {/* Header */}
-            <div className="mb-8">
+            <div className="mb-8 text-center">
                 <p className="text-[11px] font-semibold uppercase tracking-widest text-black/40 dark:text-white/40 mb-1">
                     Timeline
                 </p>
 
-                <h1 className="text-2xl font-bold text-black dark:text-white">
+                <h1 className="page-title text-black dark:text-white">
                     {data.subject}
                 </h1>
 

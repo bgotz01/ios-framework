@@ -1,5 +1,7 @@
 "use client";
 
+import { useState } from "react";
+
 export type TriadLeg = {
     icon: string;
     title: string;
@@ -17,11 +19,14 @@ export type TriadCardData = {
     legs: [TriadLeg, TriadLeg, TriadLeg];
 };
 
-export default function TriadCard({ data, openRows, onToggle }: {
+export default function TriadCard({ data, openRows: openRowsProp, onToggle: onToggleProp }: {
     data: TriadCardData;
-    openRows: boolean[];
-    onToggle: (i: number) => void;
+    openRows?: boolean[];
+    onToggle?: (i: number) => void;
 }) {
+    const [internalOpen, setInternalOpen] = useState<boolean[]>([false, false, false]);
+    const openRows = openRowsProp ?? internalOpen;
+    const onToggle = onToggleProp ?? ((i: number) => setInternalOpen(prev => prev.map((v, idx) => idx === i ? !v : v)));
     return (
         <div className="flex flex-col">
             {/* Header */}

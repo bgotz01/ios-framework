@@ -5,29 +5,32 @@ const laws = [
     {
         title: "Law of Obvious",
         subtitle: "The Signal",
+        icon: "/images/icons/o1-icon.png",
         bullets: [
             "What's the most obvious issue or tension?",
-            "What incentives sustain the current system?",
-            "What signals reveal how the system actually operates?",
+            "Who has the incentives?",
+            "What idea is being defended?",
         ],
-        conclusion: "The obvious reveals how the system works — and where it is weakest."
+        conclusion: "The most obvious answer is usually the right one."
     },
     {
         title: "Law of Opposites",
         subtitle: "The Swing",
+        icon: "/images/icons/o2-icon.png",
         bullets: [
-            "What's the inversion of the current paradigm?",
-            "Which assumptions of the old system are flipped?",
-            "What emerging force is swinging against the dominant order?",
+            "What's the inversion of the current failed paradigm?",
+            "What's the opposite of what is being marketed to you?",
+            "Where is the fringe gaining momentum?",
         ],
         conclusion: "Every paradigm eventually produces the force that will replace it."
     },
     {
         title: "Law of Outliers",
         subtitle: "The Story",
+        icon: "/images/icons/o3-icon.png",
         bullets: [
             "What new idea wins the narrative?",
-            "Who is the person, group, or technology that embodies it?",
+            "Where are the assymmetrical returns?",
             "What event forces the system to turn?",
         ],
         conclusion: "Paradigms shift when an outlier turns tension into transformation."
@@ -62,6 +65,13 @@ export default function O3Page() {
                             <h2 className="text-xl font-semibold text-black dark:text-white">
                                 {law.title}
                             </h2>
+                            <Image
+                                src={law.icon}
+                                alt={law.title}
+                                width={48}
+                                height={48}
+                                className="mx-auto mt-3 object-contain"
+                            />
                             <p
                                 className="text-xs uppercase tracking-widest mt-2 px-2 py-0.5 rounded inline-block"
                                 style={{ backgroundColor: "var(--accent)", color: "#1e3a5f" }}

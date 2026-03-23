@@ -71,7 +71,7 @@ export default function Sidebar() {
                             key={href}
                             href={href}
                             className={`flex items-center gap-3 px-2 py-2 rounded-md text-sm transition-colors ${active
-                                ? "bg-black text-white dark:bg-white dark:text-black font-medium"
+                                ? "text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-500/10 font-medium"
                                 : "text-black dark:text-white hover:bg-black/5 dark:hover:bg-white/10"
                                 }`}
                         >

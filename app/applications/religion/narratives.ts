@@ -1,4 +1,4 @@
-import { FoundationalNarrativesData } from "@/app/components/FoundationalNarratives";
+import { FoundationalNarrativesData } from "@/components/FoundationalNarratives";
 
 export const judaismNarratives: FoundationalNarrativesData = {
     subject: "Judaism",
