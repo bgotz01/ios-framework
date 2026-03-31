@@ -14,6 +14,8 @@ const navItems = [
 
 const mapsItems = [
     { label: "Propaganda", href: "/maps/propaganda" },
+    { label: "Empires", href: "/maps/empires" },
+    { label: "U.S. Empire", href: "/maps/empire-us" },
 ];
 
 const timelinesItems = [

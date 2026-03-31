@@ -24,8 +24,8 @@ export default function Navbar() {
                             key={href}
                             href={href}
                             className={`px-3 py-1.5 rounded-md text-sm transition-colors ${active
-                                ? "bg-black text-white dark:bg-white dark:text-black font-medium"
-                                : "text-black dark:text-white hover:bg-black/5 dark:hover:bg-white/10"
+                                ? "bg-black/10 text-black dark:bg-white/15 dark:text-white font-medium"
+                                : "text-black/60 dark:text-white/60 hover:bg-black/5 dark:hover:bg-white/10 hover:text-black dark:hover:text-white"
                                 }`}
                         >
                             {label}

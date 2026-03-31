@@ -118,8 +118,8 @@ export default function OutlierSpectrum({
                                                 className={`text-sm font-medium leading-5 md:text-base ${isHovered || isActive
                                                     ? "text-white"
                                                     : isPastOrActive
-                                                        ? "text-white/75"
-                                                        : "text-white/40"
+                                                        ? "text-white/85"
+                                                        : "text-white/60"
                                                     }`}
                                             >
                                                 {level.shortLabel ?? level.title}
@@ -127,15 +127,25 @@ export default function OutlierSpectrum({
                                             {level.subtitle && (
                                                 <div
                                                     className={`mt-0.5 text-xs leading-4 ${isHovered || isActive
-                                                        ? "text-white/70"
+                                                        ? "text-white/85"
                                                         : isPastOrActive
-                                                            ? "text-white/40"
-                                                            : "text-white/25"
+                                                            ? "text-white/70"
+                                                            : "text-white/50"
                                                         }`}
                                                 >
                                                     {level.subtitle}
                                                 </div>
                                             )}
+                                            <div
+                                                className={`mt-1 text-[10px] uppercase tracking-[0.18em] ${isHovered || isActive
+                                                    ? "text-white/70"
+                                                    : isPastOrActive
+                                                        ? "text-white/60"
+                                                        : "text-white/40"
+                                                    }`}
+                                            >
+                                                {index + 1}
+                                            </div>
                                         </button>
                                     );
                                 })}
@@ -214,17 +224,6 @@ export default function OutlierSpectrum({
                                                         <div className="absolute inset-[-7px] rounded-full border border-white/35" />
                                                     )}
                                                 </motion.div>
-                                            </div>
-
-                                            <div
-                                                className={`mt-3 text-[10px] uppercase tracking-[0.18em] ${isActive
-                                                    ? "text-white/70"
-                                                    : isPastOrActive
-                                                        ? "text-white/45"
-                                                        : "text-white/25"
-                                                    }`}
-                                            >
-                                                {index + 1}
                                             </div>
 
                                             {index < example.levels.length - 1 && (
